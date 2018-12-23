@@ -1,0 +1,48 @@
+{
+	"name": "@zebrajaeger/gulp-scale-images",
+	"description": "Gulp plugin to resize each image into multiple smaller variants.",
+	"version": "0.0.1",
+	"main": "index.js",
+	"files": [
+		"index.js",
+		"lib",
+		"example.js"
+	],
+	"keywords": [
+		"gulp",
+		"gulpplugin",
+		"scale",
+		"resize",
+		"image",
+		"picture",
+		"sharp",
+		"parallel"
+	],
+	"author": "zebrajaeger",
+	"homepage": "https://github.com/zebrajaeger/gulp-scale-images",
+	"repository": "zebrajaeger/gulp-scale-images",
+	"bugs": "https://github.com/zebrajaeger/gulp-scale-images/issues",
+	"license": "ISC",
+	"engines": {
+		"node": ">=6"
+	},
+	"dependencies": {
+		"fancy-log": "latest",
+		"plugin-error": "latest",
+		"sharp": "latest",
+		"jimp": "latest",
+		"through2": "^3.0.0"
+	},
+	"devDependencies": {
+		"co": "^4.6.0",
+		"flat-map": "^1.0.0",
+		"p-event": "^2.0.0",
+		"tape": "^4.9.0",
+		"tape-promise": "^4.0.0",
+		"vinyl": "^2.1.0",
+		"vinyl-file": "^3.0.0"
+	},
+	"scripts": {
+		"prepublishOnly": "npm test"
+	}
+}
