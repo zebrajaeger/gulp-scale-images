@@ -5,13 +5,13 @@ const PluginError = require('plugin-error');
 const through = require('through2');
 
 const SCALE_INFO = require('./lib/scale-info');
-const defaultComputeFileName = require('./lib/compute-file-name');
+const DEFAULT_COMPUTE_FILENAME = require('./lib/compute-file-name');
 const pkgName = require('./package.json').name;
 
 const isObj = o =>
 	o !== null && 'object' === typeof o && !Array.isArray(o);
 
-const createScaleImagesPlugin = ( resize, computeFileName = defaultComputeFileName) => {
+const createScaleImagesPlugin = ( resize, computeFileName = DEFAULT_COMPUTE_FILENAME) => {
 	const out = through.obj(function processFile(input, _, cb) {
 		const onErr = (msg) => {
 			const err = new PluginError(pkgName, {message: msg});
@@ -72,4 +72,5 @@ const createScaleImagesPlugin = ( resize, computeFileName = defaultComputeFileNa
 };
 
 createScaleImagesPlugin.SCALE_INFO = SCALE_INFO;
+createScaleImagesPlugin.DEFAULT_COMPUTE_FILENAME = DEFAULT_COMPUTE_FILENAME;
 module.exports = createScaleImagesPlugin;
