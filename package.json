@@ -1,7 +1,7 @@
 {
 	"name": "@zebrajaeger/gulp-scale-images",
 	"description": "Gulp plugin to resize each image into multiple smaller variants.",
-	"version": "0.0.2",
+	"version": "0.0.3    \"@zebrajaeger/gulp-scale-images\": \"latest\",\n    \"@zebrajaeger/gulp-scale-images-resize-jimp\": \"latest\",\n",
 	"main": "index.js",
 	"files": [
 		"index.js",
@@ -16,6 +16,7 @@
 		"image",
 		"picture",
 		"sharp",
+		"jimp",
 		"parallel"
 	],
 	"author": "zebrajaeger",
@@ -29,8 +30,6 @@
 	"dependencies": {
 		"fancy-log": "latest",
 		"plugin-error": "latest",
-		"sharp": "latest",
-		"jimp": "latest",
 		"through2": "^3.0.0"
 	},
 	"devDependencies": {
